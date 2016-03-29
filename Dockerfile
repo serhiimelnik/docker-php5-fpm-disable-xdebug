@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
         libpng12-dev \
-        libcu-dev \
+        libicu-dev \
         php5-dev \
         php5-mysql \
         php5-sqlite \
@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install mongo \
     && docker-php-ext-enable mongo \
     && docker-php-ext-install pdo pdo_mysql \
-    && docker-php-ext-install intl
+    && docker-php-ext-install -j$(nproc) intl
 
 WORKDIR /var/www
 
