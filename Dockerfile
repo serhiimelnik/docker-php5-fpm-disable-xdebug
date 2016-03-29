@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install mongo \
     && docker-php-ext-enable mongo \
     && docker-php-ext-install pdo pdo_mysql \
-    && docker-php-ext-install -j$(nproc) intl
+    && docker-php-ext-install intl
 
 WORKDIR /var/www
 
