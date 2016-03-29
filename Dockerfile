@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
         libpng12-dev \
+        libcu-dev \
         php5-dev \
         php5-mysql \
         php5-sqlite \
