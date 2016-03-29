@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install gd \
     && pecl install mongo \
     && docker-php-ext-enable mongo \
-    && docker-php-ext-enable exif \
+    && docker-php-ext-install exif \
     && docker-php-ext-install pdo pdo_mysql \
     && docker-php-ext-install -j$(nproc) intl
 
